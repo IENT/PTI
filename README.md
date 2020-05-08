@@ -10,12 +10,14 @@ Visit the notebook [index.ipynb](index.ipynb) for a table of contents.
 
 ## Quick Start
 
-Run the notebooks directly online [Jupyter RWTH](https://jupyter.rwth-aachen.de).
+T.B.D.: Run the notebooks directly online [Jupyter RWTH](https://jupyter.rwth-aachen.de).
 
 * The starting process of the session may take up to one minute.
-* Please note that the session will be cancelled after 10 minutes of user inactivity.
 
-As a fall back:
+As a fall back: Use Binder or offline usage (see below).
+
+## Binder
+
 Run the notebooks directly online [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/git/https%3A%2F%2Fgit.rwth-aachen.de%2FIENT%2Fpti/master?urlpath=lab/tree/index.ipynb). Please note the following limitations:
 
 * The starting process of the session may take up to one minute.
