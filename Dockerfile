@@ -11,8 +11,8 @@ RUN pip install --upgrade \
 
 
 RUN jupyter labextension install \
-    @lckr/jupyterlab_variableinspector \
-    jupyterlab-rwth
+    @lckr/jupyterlab_variableinspector@0.5.0 \
+    jupyterlab-rwth@0.0.1
 
 USER root
 RUN apt-get update && \
