@@ -3,7 +3,10 @@ ARG BASE_IMAGE=registry.git.rwth-aachen.de/jupyter/profiles/rwth-courses
 FROM ${BASE_IMAGE}
 
 RUN conda install --quiet --yes \
-	'scipy==1.4.1' && \
+	'scipy==1.4.1' \
+    'scikit-image==0.16.2' \
+    'opencv==4.2.0' \
+    'cython==0.29.15' && \
 	conda clean --all
 
 RUN pip install --upgrade \
@@ -17,7 +20,8 @@ RUN jupyter labextension install \
 USER root
 RUN apt-get update && \
 	apt-get -y install \
-		lame && \
+		lame \
+        libgl1-mesa-glx && \
 	rm -rf /var/lib/apt/lists/*
 
 

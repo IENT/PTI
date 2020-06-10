@@ -8,3 +8,6 @@ dependencies:
   - jupyterlab==2.0.1
   - nodejs==13.13.0
   - ipympl==0.5.6
+  - scikit-image==0.16.2
+  - opencv==4.2.0
+  - cython==0.29.15
