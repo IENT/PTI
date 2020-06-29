@@ -6,11 +6,12 @@ RUN conda install --quiet --yes \
 	'scipy==1.4.1' \
     'scikit-image==0.16.2' \
     'opencv==4.2.0' \
+    'tensorflow==1.15.0' \
     'cython==0.29.15' && \
 	conda clean --all
 
 RUN pip install --upgrade \
-'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.1'
+'git+https://git.rwth-aachen.de/jupyter/rwth-nb'
 
 
 RUN jupyter labextension install \
