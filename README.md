@@ -10,7 +10,7 @@ Visit the notebook [index.ipynb](index.ipynb) for a table of contents.
 
 ## Quick Start
 
-T.B.D.: Run the notebooks directly online [Jupyter RWTH](https://jupyter.rwth-aachen.de).
+Run the notebooks directly online [Jupyter RWTH](https://jupyter.rwth-aachen.de).
 
 * The starting process of the session may take up to one minute.
 
