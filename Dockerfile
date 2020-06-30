@@ -6,7 +6,6 @@ RUN conda install --quiet --yes \
 	'scipy==1.4.1' \
     'scikit-image==0.16.2' \
     'opencv==4.2.0' \
-    'tensorflow==1.15.0' \
     'cython==0.29.15' && \
 	conda clean --all
 
