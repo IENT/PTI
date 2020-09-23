@@ -1,5 +1,4 @@
 ARG BASE_IMAGE=registry.git.rwth-aachen.de/jupyter/profiles/rwth-courses
-
 FROM ${BASE_IMAGE}
 
 RUN conda install --quiet --yes \
@@ -12,10 +11,8 @@ RUN conda install --quiet --yes \
 RUN pip install --upgrade \
 'git+https://git.rwth-aachen.de/jupyter/rwth-nb'
 
-
 RUN jupyter labextension install \
-    @lckr/jupyterlab_variableinspector@0.5.0 \
-    jupyterlab-rwth@0.0.1
+    @lckr/jupyterlab_variableinspector@0.5.0
 
 USER root
 RUN apt-get update && \
@@ -24,8 +21,4 @@ RUN apt-get update && \
         libgl1-mesa-glx && \
 	rm -rf /var/lib/apt/lists/*
 
-
 USER ${NB_USER}
-
-# Copy workspace
-COPY ./ /home/jovyan
