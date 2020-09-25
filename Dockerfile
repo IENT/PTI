@@ -9,7 +9,7 @@ RUN conda install --quiet --yes \
 	conda clean --all
 
 RUN pip install --upgrade \
-'git+https://git.rwth-aachen.de/jupyter/rwth-nb'
+'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.4'
 
 RUN jupyter labextension install \
     @lckr/jupyterlab_variableinspector@0.5.0
