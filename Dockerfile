@@ -9,10 +9,11 @@ RUN conda install --quiet --yes \
 	conda clean --all
 
 RUN pip install --upgrade \
-'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.4'
+'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.4' \
+'tensorflow==1.15'
 
 RUN jupyter labextension install \
-    @lckr/jupyterlab_variableinspector@0.5.0
+    @lckr/jupyterlab_variableinspector@0.5.1
 
 USER root
 RUN apt-get update && \
