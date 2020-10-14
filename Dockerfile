@@ -8,8 +8,8 @@ RUN conda install --quiet --yes \
     'opencv==4.2.0' \
 	'numpy=' \
 	'matplotlib' \
-	'scikit-learn' \
-	'Pillow' \
+	'scikit-learn==0.23.2' \
+	'Pillow==7.2.0' \
     'cython==0.29.15' && \
 	conda clean --all
 
