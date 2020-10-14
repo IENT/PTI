@@ -6,10 +6,10 @@ RUN conda install --quiet --yes \
 	'scipy==1.4.1' \
     'scikit-image==0.16.2' \
     'opencv==4.2.0' \
-	'numpy==1.17.3' \
-	'matplotlib==3.1.1' \
-	'scikit-learn==0.21.3' \
-	'Pillow==6.2.1' \
+	'numpy=' \
+	'matplotlib' \
+	'scikit-learn' \
+	'Pillow' \
     'cython==0.29.15' && \
 	conda clean --all
 
