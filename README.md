@@ -1,5 +1,6 @@
 # Praktikum Technische Informatik
 
+[![RWTHjupyter](https://jupyter.pages.rwth-aachen.de/documentation/images/badge-launch-rwth-jupyter.svg)](https://jupyter.rwth-aachen.de/hub/spawn?profile=pti&next=/user-redirect/lab/tree/pti%2Findex.ipynb) 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/git/https%3A%2F%2Fgit.rwth-aachen.de%2FIENT%2Fpti/master?urlpath=lab/tree/index.ipynb)
 
 ## Introduction
@@ -10,7 +11,7 @@ Visit the notebook [index.ipynb](index.ipynb) for a table of contents.
 
 ## Quick Start
 
-Run the notebooks directly online [Jupyter RWTH](https://jupyter.rwth-aachen.de).
+Run the notebooks directly online [RWTHjupyter](https://jupyter.rwth-aachen.de): [![RWTHjupyter](https://jupyter.pages.rwth-aachen.de/documentation/images/badge-launch-rwth-jupyter.svg)](https://jupyter.rwth-aachen.de/hub/spawn?profile=pti&next=/user-redirect/lab/tree/pti%2Findex.ipynb)
 
 * The starting process of the session may take up to one minute.
 
