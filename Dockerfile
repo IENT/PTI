@@ -5,6 +5,8 @@ RUN conda install --quiet --yes \
 	'scipy==1.4.1' \
     'scikit-image==0.16.2' \
     'opencv==4.2.0' \
+	'scikit-learn==0.23.2' \
+	'Pillow==7.2.0' \
     'cython==0.29.15' && \
 	conda clean --all
 
