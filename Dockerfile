@@ -7,12 +7,14 @@ RUN conda install --quiet --yes \
     'opencv==4.2.0' \
 	'scikit-learn==0.23.2' \
 	'Pillow==7.2.0' \
+	'pandas==1.1.3' \
     'cython==0.29.15' && \
 	conda clean --all
 
 RUN pip install --upgrade \
 'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.4' \
-'tensorflow==1.15'
+'tensorflow==1.15' \
+'python-sofa==0.2.0'
 
 RUN jupyter labextension install \
     @lckr/jupyterlab_variableinspector@0.5.1
