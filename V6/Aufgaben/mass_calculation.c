@@ -18,6 +18,7 @@
 void calculate_center(int dimm, int dimn,double* res_cm, double* res_cn, double labelact, double** labelmatrix)
 {
     // Hier folgt Ihr Code für die Berechnung des Massenschwerpunktes (Teil 2, A1.1)...
+    for (int i = 0 )
     
 }
 
