@@ -1,7 +1,7 @@
 # Praktikum Technische Informatik
 
 [![RWTHjupyter](https://jupyter.pages.rwth-aachen.de/documentation/images/badge-launch-rwth-jupyter.svg)](https://jupyter.rwth-aachen.de/hub/spawn?profile=pti&next=/user-redirect/lab/tree/pti%2Findex.ipynb) 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/git/https%3A%2F%2Fgit.rwth-aachen.de%2FIENT%2Fpti/master?urlpath=lab/tree/index.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/IENT/PTI.git/master?urlpath=lab/tree/index.ipynb)
 
 ## Introduction
 
@@ -19,7 +19,7 @@ As a fall back: Use Binder or offline usage (see below).
 
 ## Binder
 
-Run the notebooks directly online [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/git/https%3A%2F%2Fgit.rwth-aachen.de%2FIENT%2Fpti/master?urlpath=lab/tree/index.ipynb). Please note the following limitations:
+Run the notebooks directly online [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/IENT/PTI.git/master?urlpath=lab/tree/index.ipynb). Please note the following limitations:
 
 * The starting process of the session may take up to one minute.
 * Please note that the session will be cancelled after 10 minutes of user inactivity.
