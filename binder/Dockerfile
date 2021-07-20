@@ -14,14 +14,7 @@ RUN conda install --name base --no-update-deps \
 		'ipywidgets==7.5.1' \
 		'ipympl==0.5.6' \
 		'matplotlib-base==3.2.1' \
-		'jupyterlab_latex==2.0.0' \
-	  'scipy==1.4.1' \
-    'scikit-image==0.16.2' \
-    'opencv==4.2.0' \
-	  'scikit-learn==0.23.2' \
-	  'Pillow==7.2.0' \
-	  'pandas==1.1.3' \
-    'cython==0.29.15' && \
+		'jupyterlab_latex==2.0.0' && \
 	conda clean --all
 	
 # Basic Backend extensions
@@ -42,15 +35,6 @@ RUN jupyter labextension install \
 	jupyterlab-rwth@0.0.1 \
 	@jupyterlab/latex@2.0.1
 
-
-RUN pip install --upgrade \
-'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.4' \
-'tensorflow==1.15' \
-'python-sofa==0.2.0'
-
-RUN jupyter labextension install \
-    @lckr/jupyterlab_variableinspector@0.5.1
-
 USER root
 
 # Use RWTH Mirror
@@ -60,9 +44,7 @@ RUN apt-get update && \
 	apt-get -y install \
 		language-pack-de \
 		texlive-latex-recommended \
-		openssh-client \
-		lame \
-    libgl1-mesa-glx && \
+		openssh-client && \
 	rm -rf /var/lib/apt/lists/*
 
 # Add more locales
