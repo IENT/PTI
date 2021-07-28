@@ -3,6 +3,11 @@
 [![RWTHjupyter](https://jupyter.pages.rwth-aachen.de/documentation/images/badge-launch-rwth-jupyter.svg)](https://jupyter.rwth-aachen.de/hub/spawn?profile=pti&next=/user-redirect/lab/tree/pti%2Findex.ipynb) 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/IENT/PTI.git/master?urlpath=lab/tree/index.ipynb)
 
+## Housekeeping
+The overall process of maintenance is not trivial, as there is one [public repository](https://git.rwth-aachen.de/IENT/pti), which forms the basis for the lab. However, in the public repository the reference solution must not be stored. Therefore, a [fork](https://git.rwth-aachen.de/IENT-Internal/pti) exists in the IENT-internal namespace on git.rwth-aachen.de. This fork contains another branch (it is called ml for Musterlösung). On this branch, the notebooks should also contain the reference solution. 
+
+If something should be changed, the best practice would be to work on the ml branch and merge all relevant changes for the tasks itself into master. Be careful. This merge should be performed manually, as otherwise the reference solution would also end up on the master branch. After this process, a merge request to the public repo should be issued. After a code review the MR can be accepted. This process should ensure that the public repo remains clean. 
+
 ## Introduction
 
 This repository contains Jupyter Notebooks for the Praktikum Technische Informatik at RWTH Aachen University.
