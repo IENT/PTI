@@ -12,7 +12,7 @@ RUN conda install --quiet --yes \
 	conda clean --all
 
 RUN pip install --upgrade \
-'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.4' \
+'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.7' \
 'tensorflow==1.15' \
 'python-sofa==0.2.0'
 
