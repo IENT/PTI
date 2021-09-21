@@ -1,4 +1,4 @@
-ARG BASE_IMAGE=registry.git.rwth-aachen.de/jupyter/profiles/rwth-courses
+ARG BASE_IMAGE=registry.git.rwth-aachen.de/jupyter/profiles/rwth-courses@sha256:45a7199ee00c1559d18e46a19e94ffc15c64105053d9213ca3dda35d10bf30b1
 FROM ${BASE_IMAGE}
 
 RUN conda install --quiet --yes \
@@ -12,7 +12,7 @@ RUN conda install --quiet --yes \
 	conda clean --all
 
 RUN pip install --upgrade \
-'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.4' \
+'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.7' \
 'tensorflow==1.15' \
 'python-sofa==0.2.0'
 
