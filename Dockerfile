@@ -34,3 +34,6 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 USER ${NB_USER}
+
+RUN pip install --upgrade \
+  'git+https://github.com/stv0g/nbgitpuller@f735265f7b2a429a17a8fab70cfd3557f060640d'
