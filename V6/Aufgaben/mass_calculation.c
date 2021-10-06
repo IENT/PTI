@@ -4,21 +4,40 @@
 
 /*
     ### INPUT PARAMETER ###
+    labelact = Die Nummer der aktuell betrachtete Labelregion
+    labelmatrix = Die Matrix des Labelbildes. Zugriff ist per [][]-Operator möglich. Siehe "labelmatrix.ipynb" für ein Beispiel.
     dimm = Anzahl der Zeilen der Labelbildmatrix
     dimn = Anzahl der Spalten der Labelbilmatrix
     res_cm = Speichern Sie dort die x-Koordinate Ihres berechneten Schwerpunktes
     res_cn = Speichern Sie dort die y-Koordinate Ihres berechneten Schwerpunktes
-    labelact = Die aktuell betrachtete Labelregion als Double
-    labelmatrix = Die Matrix des Labelbildes im Datentyp double. Zugriff per [][]-Operator.
-    
     Beachten Sie die vorliegenden Datentypen und verändern Sie diese nicht.
-    
-    Hinweis: Die Labelmatrix liegt als Doppel-Pointer vor und wird mittels [][]-Operator bereits zwei mal derefernziert, behandeln Sie diese also wie ein normales 2D-              Array
 */
 void calculate_center(int dimm, int dimn,double* res_cm, double* res_cn, double labelact, double** labelmatrix)
 {
-    // Hier folgt Ihr Code für die Berechnung des Massenschwerpunktes (Teil 2, A1.1)...
+    // Hier folgt Ihr Code für die Berechnung des Massenschwerpunktes (Versuch 2, A1.1)...
     
+    int mass = 0;
+    int cmd = 0;
+    int cnd = 0;
+    
+    for(int i = 0; i < dimm ; i++) //Summe 1
+        {
+            for(int j = 0; j < dimn ; j++) //Summe 2
+            {  
+                if(labelmatrix[i][j] == labelact) // Zähle alle Einträge der Matrix die dem Labelgebiet entsprechen
+                {
+                     cmd = cmd + i;
+                     cnd = cnd + j;
+                     mass = mass + 1;
+                }
+            } // end of for j 
+        } //end of for i   
+    
+    if (mass !=0)
+    {
+    *res_cm = cmd / (double)mass;
+    *res_cn = cnd / (double)mass;
+    }
 }
 
 
@@ -41,7 +60,18 @@ void calculate_center(int dimm, int dimn,double* res_cm, double* res_cn, double 
 */
 void calculate_central(int dimm, int dimn, double** schwerpunkte, double** labelmatrix, double labelact, int h, int v, double* c)
 {
-    // Hier folgt Ihr Code für die Berechnung des Massenschwerpunktes (Teil 2, A2.1)...
+    // Hier folgt Ihr Code für die Berechnung der zentralmomente (Versuch 2, A2.1)...
+    
+    for(int i = 0; i < dimm; i++) //Summe 1
+    {
+        for(int j = 0; j < dimn; j++) //Summe 2
+        {  
+            if(labelmatrix[i][j] == labelact) // Zähle alle Einträge der Matrix die dem Labelgebiet entsprechen
+            {
+                *c = *c + pow(i-schwerpunkte[(int)labelact-1][0],h) * pow(j-schwerpunkte[(int)labelact-1][1],v); //-1, da Index bei 0 beginnt
+            }
+        } // end of for j 
+    } //end of for i
 }
 
 
