@@ -14,7 +14,7 @@
 */
 void calculate_center(int dimm, int dimn,double* res_cm, double* res_cn, double labelact, double** labelmatrix)
 {
-    // Hier folgt Ihr Code für die Berechnung des Massenschwerpunktes (Versuch 2, A1.1)...
+    // Hier folgt Ihr Code für die Berechnung des Massenschwerpunktes (Teil 2, A1.1)...
     
     int mass = 0;
     int cmd = 0;
@@ -60,7 +60,7 @@ void calculate_center(int dimm, int dimn,double* res_cm, double* res_cn, double 
 */
 void calculate_central(int dimm, int dimn, double** schwerpunkte, double** labelmatrix, double labelact, int h, int v, double* c)
 {
-    // Hier folgt Ihr Code für die Berechnung der zentralmomente (Versuch 2, A2.1)...
+    // Hier folgt Ihr Code für die Berechnung der Zentralmomente (Teil 2, A2.1)...
     
     for(int i = 0; i < dimm; i++) //Summe 1
     {
