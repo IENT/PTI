@@ -30,7 +30,8 @@ USER root
 RUN apt-get update && \
   apt-get -y install \
   lame \
-  libgl1-mesa-glx && \
+  libgl1-mesa-glx \
+  build-essential && \
   rm -rf /var/lib/apt/lists/*
 
 USER ${NB_USER}
