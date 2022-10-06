@@ -18,7 +18,8 @@ RUN conda install --quiet --yes \
 RUN pip install --upgrade \
   'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.7' \
   'tensorflow==1.15' \
-  'python-sofa==0.2.0'
+  'python-sofa==0.2.0' \
+  'protobuf==3.15.7'
 
 
 #RUN jupyter labextension install \
