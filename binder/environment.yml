@@ -16,6 +16,7 @@ dependencies:
   - nodejs==14.17.4
   - ipympl==0.7.0
   - scikit-image==0.16.2
+  - scikit-learn==0.23.2
   - opencv==4.2.0
   - tensorflow==1.15.0
   - cython==0.29.15
