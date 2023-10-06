@@ -1,5 +1,5 @@
 numpy
-matplotlib
+matplotlib-base
 ipympl
 jupyterlab
 scipy
