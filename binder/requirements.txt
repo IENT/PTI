@@ -11,8 +11,8 @@ pandas==2.1.1
 cython==3.0.3
 python-sofa==0.2.0
 protobuf==4.24.4
-lckr-jupyterlab-variableinspector==3.0.9
+lckr-jupyterlab-variableinspector
 pyscreenshot==3.1
-torch==2.1.0+cpu
-torchvision==0.16.0+cpu
+torch==2.1.0
+torchvision==0.16.0
 git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.8
