@@ -1,0 +1,19 @@
+numpy
+matplotlib
+ipympl
+jupyterlab
+scipy
+scikit-image
+opencv-python
+scikit-learn
+Pillow
+pandas
+cython
+git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.7
+python-sofa
+protobuf
+lckr-jupyterlab-variableinspector
+pyscreenshot
+-i https://download.pytorch.org/whl/cpu 
+torch
+torchvision
