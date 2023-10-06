@@ -2,24 +2,24 @@ ARG BASE_IMAGE=registry.git.rwth-aachen.de/jupyter/profiles/rwth-courses:latest
 FROM ${BASE_IMAGE}
 
 RUN pip install --upgrade --index-url https://download.pytorch.org/whl/cpu \
-  'torch' \
-  'torchvision' && \
+  'torch==2.1.0+cpu' \
+  'torchvision==0.16.0+cpu' && \
   pip cache purge
 
 RUN pip install --upgrade \
-  'scipy' \
-  'scikit-image' \
-  'scikit-learn' \
-  'Pillow' \
-  'pandas' \
-  'opencv-python' \
-  'cython' && \
+  'scipy==1.11.3' \
+  'scikit-image==0.22.0' \
+  'scikit-learn==1.3.1' \
+  'Pillow==10.0.1' \
+  'pandas==2.1.1' \
+  'opencv-python==4.8.1.78' \
+  'cython==3.0.3' && \
   pip cache purge
 
 RUN pip install --upgrade \
-  'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.7' \
+  'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.8' \
   'python-sofa==0.2.0' \
-  'protobuf==3.15.7' && \
+  'protobuf==4.24.4' && \
   pip cache purge
 
 #RUN jupyter labextension install \
