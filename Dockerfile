@@ -13,7 +13,8 @@ RUN pip install --upgrade \
   'Pillow==10.0.1' \
   'pandas==2.1.1' \
   'opencv-python==4.8.1.78' \
-  'cython==3.0.3' && \
+  'cython==3.0.3' \
+  'pyscreenshot==3.1' && \
   pip cache purge
 
 RUN pip install --upgrade \
