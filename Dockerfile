@@ -1,31 +1,33 @@
 ARG BASE_IMAGE=registry.git.rwth-aachen.de/jupyter/profiles/rwth-courses:latest
 FROM ${BASE_IMAGE}
 
-RUN conda install --quiet --yes \
-  'python==3.7.8' && \
-  conda clean --all
-
-RUN conda install --quiet --yes \
-  'scipy==1.4.1' \
-  'scikit-image==0.16.2' \
-  'opencv==4.2.0' \
-  'scikit-learn==0.23.2' \
-  'Pillow==7.2.0' \
-  'pandas==1.1.3' \
-  'cython==0.29.15' && \
-  conda clean --all
+RUN pip install --upgrade --index-url https://download.pytorch.org/whl/cpu \
+  'torch==2.1.0+cpu' \
+  'torchvision==0.16.0+cpu' && \
+  pip cache purge
 
 RUN pip install --upgrade \
-  'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.7' \
-  'tensorflow==1.15' \
-  'python-sofa==0.2.0' \
-  'protobuf==3.15.7'
+  'scipy==1.11.3' \
+  'scikit-image==0.22.0' \
+  'scikit-learn==1.3.1' \
+  'Pillow==10.0.1' \
+  'pandas==2.1.1' \
+  'opencv-python==4.8.1.78' \
+  'cython==3.0.3' \
+  'pyscreenshot==3.1' && \
+  pip cache purge
 
+RUN pip install --upgrade \
+  'git+https://git.rwth-aachen.de/jupyter/rwth-nb@v0.1.8' \
+  'python-sofa==0.2.0' \
+  'protobuf==4.24.4' && \
+  pip cache purge
 
 #RUN jupyter labextension install \
 #  @lckr/jupyterlab_variableinspector@0.5.1
 RUN pip install --upgrade \
-  'lckr-jupyterlab-variableinspector'
+  'lckr-jupyterlab-variableinspector' && \
+  pip cache purge
 
 USER root
 RUN apt-get update && \
@@ -38,4 +40,5 @@ RUN apt-get update && \
 USER ${NB_USER}
 
 RUN pip install --upgrade \
-  'git+https://github.com/stv0g/nbgitpuller@f735265f7b2a429a17a8fab70cfd3557f060640d'
+  'git+https://github.com/stv0g/nbgitpuller@f735265f7b2a429a17a8fab70cfd3557f060640d' && \
+  pip cache purge
