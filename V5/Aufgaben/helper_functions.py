@@ -54,7 +54,7 @@ def get_HRIR_at_direction(HRIR_dataset, azimuth, elevation):
     return HRIR
 
 
-def plot_HRIR(HRIR, ILD, ITD, sampling_rate=44100):
+def plot_HRIR(HRIR, ILD, ITD, sampling_rate=44100, fig=None, ax=None):
     """
     Plot the given HRIR while visualizing its ILD and ITD.
 
@@ -70,7 +70,11 @@ def plot_HRIR(HRIR, ILD, ITD, sampling_rate=44100):
     t = np.arange(0, n_samples)/sampling_rate
 
     # create the figure and axes
-    fig, ax = plt.subplots(1, 2, figsize=(15, 4))
+    if fig is None:
+        fig, ax = plt.subplots(1, 2, figsize=(15, 4))
+    else:
+        ax[0].cla()  # or clf()?
+        ax[1].cla()  # or clf()?
 
     # get the data for the time plot:
 
@@ -133,7 +137,9 @@ def plot_HRIR_at_direction(
         azimuth,
         elevation,
         ILD_function,
-        ITD_function):
+        ITD_function,
+        fig=None,
+        ax=None):
     """
     Plot the HRIR for a given direction while visualizing its ILD and ITD.
 
@@ -148,7 +154,7 @@ def plot_HRIR_at_direction(
     """
     sampling_rate = HRIR_dataset.Data.SamplingRate.get_values(indices={"M": 0})
     HRIR = get_HRIR_at_direction(HRIR_dataset, azimuth, elevation)
-    plot_HRIR(HRIR, ILD_function(HRIR), ITD_function(HRIR), sampling_rate)
+    plot_HRIR(HRIR, ILD_function(HRIR), ITD_function(HRIR), sampling_rate, fig, ax)
 
 
 def butter_lowpass_filter(data, fs, cutoff, order):
