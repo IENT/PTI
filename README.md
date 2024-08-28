@@ -1,11 +1,11 @@
-# Praktikum Technische Informatik
+# Praktikum Computer Engineering
 
 [![RWTHjupyter](https://jupyter.pages.rwth-aachen.de/documentation/images/badge-launch-rwth-jupyter.svg)](https://jupyter.rwth-aachen.de/hub/spawn?profile=pti&next=/user-redirect/lab/tree/pti%2Findex.ipynb) 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/IENT/PTI.git/master?urlpath=lab/tree/index.ipynb)
 
 ## Introduction
 
-This repository contains Jupyter Notebooks for the Praktikum Technische Informatik at RWTH Aachen University.
+This repository contains Jupyter Notebooks for the Praktikum Computer Engineering (formerly known as Praktikum Technische Informatik) at RWTH Aachen University.
 
 Visit the notebook [index.ipynb](index.ipynb) for a table of contents.
 
