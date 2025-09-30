@@ -21,50 +21,6 @@ void calculate_center(int dimm, int dimn,double* res_cm, double* res_cn, double 
 
 
 
-/*
-    ### INPUT PARAMETER ###
-    dimm = Anzahl der Zeilen der Labelbildmatrix
-    dimn = Anzahl der Spalten der Labelbilmatrix
-    schwerpunkte = Analog zur Labelmatrix in obiger Funktion, hat dieses 2D-Array alle SChwerpunktkoordinaten gespeichert. Zugriff mittels [][]-Operator.
-    labelmatrix = Die Matrix des Labelbildes im Datentyp double. Zugriff per [][]-Operator.
-    labelact =  Die aktuell betrachtete Labelregion als Double
-    h = Ordnung horizontal 
-    v = Ordnung vertikal 
-    c = Speichern Sie dort bitte das Ergebnis des errechneten Zentralmoments.
-    
-    Beachten Sie die vorliegenden Datentypen und verändern Sie diese nicht.
-    
-    Hinweis: Die Labelmatrix liegt als Doppel-Pointer vor und wird mittels [][]-Operator bereits zwei mal derefernziert, behandeln Sie diese also wie ein normales 2D-              Array
-*/
-void calculate_central(int dimm, int dimn, double** schwerpunkte, double** labelmatrix, double labelact, int h, int v, double* c)
-{
-    // Hier folgt Ihr Code für die Berechnung der Zentralmomente (Teil 2, A2.1)...
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // HIER BITTE NICHTS VERÄNDERN
 
