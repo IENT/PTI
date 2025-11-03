@@ -53,20 +53,3 @@ void center(double **in_array, int numberoflabels, double **res_array) // n Anza
         res_cn = 0;
     } //end of for labelact  
 }
-
-
-void central(double **schwerpunkte, int n, double **labelmatrix, double **res_array_center, int h, int v)
-{
-    double c = 0.0;
-    
-    // Schwerpunktkoordinaten berechnen
-    for (int labelact = 1; labelact < n+1; labelact++) //Zähler der Gebiete, gehe jedes Gebiet durch
-    {
-        // Zentralmomente berechnen:
-        calculate_central(400, 400, schwerpunkte, labelmatrix, (double)labelact, h, v, &c);
-            
-        *res_array_center[labelact-1] = c;   
-        c = 0.0;
-    } //end of for labelact    
-    
-}
